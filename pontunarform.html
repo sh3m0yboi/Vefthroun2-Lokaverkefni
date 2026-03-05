@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pöntunarform</title>
+    <link rel="stylesheet" href="css/pico.sand.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="form-size">
+        <form action="admin.html" method="get">
+        <h4>Form</h4>
+
+            <label for="name">Nafn: </label>
+            <input type="text" id="name" required placeholder="Name">
+
+            <label for="email">Netfang: </label>
+            <input type="email" id="email" required placeholder="Email">
+
+        <div class="grid">
+            <div>
+                <label for="valmynd">Kort:</label>
+                <select id="valmynd">
+                    <option value="">Ekkert valið</option>
+                    <option value="">Debet kort</option>
+                    <option value="">Kredit Kort</option>
+                    <option value="">Annað</option>
+                </select>
+            </div>
+        </div>
+
+            <label for="card">Kortaupplýsingar</label>
+            <input type="text" id="card" required placeholder="XXXX-XXXX-XXXX-XXXX">
+
+            <input type="submit" value="Senda" class="animated-button">
+            <!-- <button type="submit">Senda</button> -->
+        </form>
+    </div>
+</body>
+</html>

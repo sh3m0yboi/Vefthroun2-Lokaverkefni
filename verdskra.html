@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verðskrá</title>
+    <link rel="stylesheet" href="css/pico.sand.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="verdskra-bg">
+
+    <main class="container">
+        <label for="menutoggle" class="menu-button">&#9776;</label>
+        <input type="checkbox" id="menutoggle">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="images/spotify-icon.svg" alt="logo" class="logo">
+                    </a>
+                </li>
+                <li>Verkefni 6 - Lokaverkefni</li>
+            </ul>
+            <ul>
+                <li><a href="#" id="showDialog"><span class="icon-pencil"></span>Innskráning</a></li>
+                <li><a href="verdskra.html">Verðskrá</a></li>
+                <li><a href="um-okkur.html">Um okkur</a></li>
+                <li><a href="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+                <li><a href="https://open.spotify.com/"><span class="icon-spotify"></span></a></li>
+                <li><a href="https://www.youtube.com/"><span class="icon-youtube"></span></a></li>
+            </ul>
+        </nav>
+
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dagur</th>
+                        <th>Staður</th>
+                        <th>Verð</th>
+                        <th>Kaupa miða</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Dagur">6 mars</td>
+                        <td data-label="Staður">Laugardalshöll</td>
+                        <td data-label="Verð">25000 kr</td>
+                        <td data-label="Kaupa miða"><a href="pontunarform.html"><button>Kaupa</button></td></a>
+                    </tr>
+                    <tr>
+                        <td data-label="Dagur">7 mars</td>
+                        <td data-label="Staður">Laugardalshöll</td>
+                        <td data-label="Verð">25000 kr</td>
+                        <td data-label="Kaupa miða"><a href="pontunarform.html"><button>Kaupa</button></td></a>
+                    </tr>
+                    <tr>
+                        <td data-label="Dagur">8 mars</td>
+                        <td data-label="Staður">Laugardalshöll</td>
+                        <td data-label="Verð">25000 kr</td>
+                        <td data-label="Kaupa miða"><a href="pontunarform.html"><button>Kaupa</button></td></a>
+                    </tr>
+                    <tr>
+                        <td data-label="Dagur">9 mars</td>
+                        <td data-label="Staður">Laugardalshöll</td>
+                        <td data-label="Verð">25000 kr</td>
+                        <td data-label="Kaupa miða"><a href="pontunarform.html"><button>Kaupa</button></td></a>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <hr>
+        <h1>Albums: 8000kr</h1>
+
+        <div class="container">
+            <div class="grid">
+                <section class="album">
+                    <source media="(min-width: 1200)" srcset="images/a-matter-of-time1200.png">
+                    <img src="images/a-matter-of-time1200.png" alt="Laufey Album">
+                    <a href="pontunarform.html">
+                        <button class="takki">Panta</button>
+                    </a>
+                </section>
+            
+                <section class="album">
+                    <source media="(min-width: 1200)" srcset="images/solace1200.png">
+                    <img src="images/solace1200.png" alt="Bryant Barnes album">
+                    <a href="pontunarform.html">
+                        <button class="takki">Panta</button>
+                    </a>
+                </section>
+            </div>
+        </div>
+
+        <hr>
+        <h1>Merch: 5000kr</h1>
+
+        <div class="container">
+            <div class="grid">
+                <section class="album">
+                    <source media="(min-width: 1200)" srcset="images/laufey-merch1200.png">
+                    <img src="images/laufey-merch1200.png" alt="Laufey merch">
+                    <a href="pontunarform.html">
+                        <button class="takki">Panta</button>
+                    </a>
+                </section>
+
+                <section class="album">
+                    <source media="(min-width: 1200)" srcset="images/bryant-barnes-merch1200.png">
+                    <img src="images/bryant-barnes-merch1200.png" alt="Bryant Barnes merch">
+                    <a href="pontunarform.html">
+                        <button class="takki">Panta</button>
+                    </a>
+                </section>
+            </div>
+        </div>
+
+        <dialog id="Dialog">
+            <article>
+                <header>
+                    <button aria-label="Close" rel="prev" id="closeDialog"></button>
+                    <p>Sláðu inn user og password:</p>
+                </header>
+                <form action="admin.html" method="get">
+                    <label for="user">Notendanafn:</label>
+                    <input type="text" id="user" placeholder="User" required>
+
+                    <label for="passwd">Lykilorð:</label>
+                    <input type="password" id="passwd" placeholder="Password" required>
+
+                    <input type="submit" value="Innskráning">
+                </form>
+            </article>
+        </dialog>
+
+        <script>
+            const openButton = document.getElementById("showDialog");
+            const closeButton = document.getElementById("closeDialog")
+            const dialog = document.getElementById("Dialog")
+
+            openButton.addEventListener('click', function(){
+                dialog.showModal();
+            });
+
+            closeButton.addEventListener('click', function(){
+                dialog.close();
+            });
+        </script>
+    </main>
+</body>
+</html>
